@@ -528,7 +528,7 @@ a{ text-decoration:none; }
 
     .contact_btn_nav{ width:720px;  margin:0 auto; padding:10px 15px 30px 15px;}
     .contact_btn_wrapper{ width:840px;  margin:0 auto; display: flex;}
-    .contact_btn_item{         width: 90%;
+    .contact_btn_item{         width: 50vw;
         padding: 2vw 15px;}
 
     .contact_form_wrapper{ width:690px; padding: 30px; border-radius: 20px; }
