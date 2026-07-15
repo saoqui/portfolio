@@ -818,24 +818,34 @@ $(document).ready(function(){
 
 
 });
-	function openImage(el){
+	function openImage(source) {
+    const modal = document.querySelector('.image-modal');
+    const modalImg = modal.querySelector('img');
 
-    const modal = document.getElementById("imageModal");
-    const image = document.getElementById("modalImage");
+    // source 可以是圖片路徑，也可以是被點擊的 img
+    const imageSrc =
+        typeof source === 'string'
+            ? source
+            : source.dataset.desktop || source.src;
 
-    const src = window.matchMedia("(max-width:768px)").matches
-        ? el.dataset.mobile
-        : el.dataset.desktop;
+    const preloadImg = new Image();
 
-    image.src = src;
+    modal.classList.add('loading');
+    modal.style.display = 'flex';
 
-    modal.style.display = "flex";
+    preloadImg.onload = function () {
+        modalImg.src = imageSrc;
+        modal.classList.remove('loading');
+    };
 
-    modal.scrollTop = 0;
+    preloadImg.onerror = function () {
+        modal.classList.remove('loading');
+        modal.style.display = 'none';
+        alert('圖片載入失敗');
+    };
 
-    document.body.style.overflow = "hidden";
+    preloadImg.src = imageSrc;
 }
-
 function closeImage(){
 
     const modal = document.getElementById("imageModal");
