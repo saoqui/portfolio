@@ -484,10 +484,17 @@ a{ text-decoration:none; }
 }
 
 .contact_btn_nav{ width:82vw; margin:0 auto; padding: 2vw 1vw;}
-.contact_btn_wrapper{width:82vw; margin:0 auto; display: flex;}
-.contact_btn_item{ padding:0 1vw; width:50%; }
+.contact_btn_wrapper{
+    width: 82vw;
+    margin: 0 auto;
+    display: flex;
+    width:72vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;}
+.contact_btn_item{  padding: 2vw 1vw; width: 100%;}
 
-.contact_form_wrapper{ position:relative; width:80vw; margin:2vw auto; padding: 5vw 3vw; border-radius: 2vw; }
+.contact_form_wrapper{ position:relative; width:80vw; margin:2vw auto; padding: 0vw 3vw; border-radius: 2vw; }
 .contact_form_title{ width:74vw; margin:0 auto 5vw auto; transform:translate(-0.2vw,0); }
 
 #form1{ padding:0 10px; /*font-size:1rem;*/}
@@ -521,7 +528,8 @@ a{ text-decoration:none; }
 
     .contact_btn_nav{ width:720px;  margin:0 auto; padding:10px 15px 30px 15px;}
     .contact_btn_wrapper{ width:840px;  margin:0 auto; display: flex;}
-    .contact_btn_item{ padding:0 15px;}
+    .contact_btn_item{         width: 90%;
+        padding: 2vw 15px;}
 
     .contact_form_wrapper{ width:690px; padding: 30px; border-radius: 20px; }
 }
