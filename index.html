@@ -860,7 +860,17 @@ function closeImage(){
     document.body.style.overflow = "";
 
 }
-	
+	window.addEventListener("load", function() {
+    const preloader = document.getElementById("preloader");
+    
+    // 設定透明度為 0 開始淡出
+    preloader.style.opacity = "0";
+    
+    // 淡出動畫結束後，將遮罩從 DOM 中移除
+    setTimeout(function() {
+        preloader.style.display = "none";
+    }, 500); 
+});
 	
 	
 </script>
