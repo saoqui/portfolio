@@ -75,25 +75,41 @@
 
 <section class="banner_section" id="banner_top">
   <div class="banner_pic">
+<!-- 手機版 Banner 影片 -->
+<video
+  class="zoom-img view_sm"
+  width="100%"
+  display="block"
+  autoplay
+  muted
+  loop
+  playsinline
+  preload="metadata"
+  data-desktop="assets/img/cv.jpg"
+  data-mobile="assets/img/cv_m.jpg"
+  onclick="openImage(this)"
+  aria-label="點擊查看履歷作品">
+  
+  <source src="assets/video/banner_pic_sm.mp4" type="video/mp4">
+</video>
 
-   <video utoplay="" playsinline="" muted="" loop="" 
-    class="zoom-img view_sm"
-    src="assets/img/banner_lg.mp4"
-    width="100%"
-    data-desktop="assets/img/cv.jpg"
-    data-mobile="assets/img/cv_m.jpg"
-    onclick="openImage(this)"
-    alt="履歷作品"></video>
-
-  <img
-    class="zoom-img view_lg"
-    src="assets/img/banner_pic_lg.webp"
-    width="100%"
-    data-desktop="assets/img/cv.webp"
-    data-mobile="assets/img/cv_m.webp"
-    onclick="openImage(this)"
-    alt="履歷作品">
-
+<!-- 電腦版 Banner 影片 -->
+<video
+  class="zoom-img view_lg"
+  width="100%"
+  display="block"
+  autoplay
+  muted
+  loop
+  playsinline
+  preload="metadata"
+  data-desktop="assets/img/cv.jpg"
+  data-mobile="assets/img/cv_m.jpg"
+  onclick="openImage(this)"
+  aria-label="點擊查看履歷作品">
+  
+  <source src="assets/img/banner_lg.mp4" type="video/mp4">
+</video>
 </div>
 
 
